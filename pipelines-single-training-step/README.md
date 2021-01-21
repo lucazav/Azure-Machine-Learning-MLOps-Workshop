@@ -32,7 +32,7 @@ Then navigate to the cloned folder in Jupyter, and open [`single_step_pipeline.i
 1. Install the Azure Machine Learning CLI extensive via `az extension add -n azure-cli-ml`
 1. Clone this repo via `git clone https://github.com/csiebler/azure-machine-learning-mlops-workshop.git`
 1. Navigate into the repo `cd azure-machine-learning-mlops-workshop/`
-1. Attach the whole repo to your workspace via `az ml folder attach -w <YOUR WORKSPACE NAME> -g <YOUR RESOURCE GROUP>`
+1. Attach the whole repo to your workspace via `az ml folder attach -w <YOUR WORKSPACE NAME> -g <YOUR RESOURCE GROUP>`. This command isn’t 100% necessary, but it’ll help by not requiring you to specify the resource group and folder over and over again every time you wish to execute a command.
 1. Fire up your favorite notebook experience and get started!
 
 # Knowledge Check

@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.6.2
+  - pip<20.3 # https://stackoverflow.com/questions/65112585/pip-installation-stuck-in-infinite-loop-if-unresolvable-conflicts-in-dependencie
   - pip:
     - azureml-defaults
     - azureml-sdk

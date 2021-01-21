@@ -13,7 +13,7 @@ We can use the `PipelineParameter` class. In this case, we always have to specif
 ```python
 default_training_dataset = Dataset.get_by_name(ws, "my_dataset")
 training_dataset_parameter = PipelineParameter(name="training_dataset", default_value=default_training_dataset)
-``` 
+```
 </details>
 
 :question: **Question:** What are some pros and cons for separating a pipeline into multiple steps?

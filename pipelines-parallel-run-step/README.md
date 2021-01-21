@@ -22,7 +22,7 @@ output_dataset = OutputFileDatasetConfig(name='batch_results', destination=(data
 
 # Lastly, we can automatically register it as a Dataset in the workspace
 output_dataset = OutputFileDatasetConfig(name='batch_results', destination=(datastore, 'batch-scoring-results/')).register_on_complete(name='batch-scoring-results')
-``` 
+```
 </details>
 
 :question: **Question:** How does `ParallelRunStep` know that the minibatch has been successfully processed?

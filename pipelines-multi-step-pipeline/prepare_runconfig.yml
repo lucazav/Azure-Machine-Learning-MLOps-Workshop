@@ -1,6 +1,6 @@
 script: prepare.py
 arguments: [] # This is set in our pipeline definition script
-target: cpu-cluster
+target: cluster
 framework: Python
 communicator: None
 nodeCount: 1

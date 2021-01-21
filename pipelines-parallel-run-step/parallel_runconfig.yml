@@ -4,7 +4,7 @@ parallel_run_config:
   error_threshold: 0
   output_action: append_row
   logging_level: INFO
-  compute_target_name: cpu-cluster
+  compute_target_name: cluster
   node_count: 1
   process_count_per_node: 2
   entry_script: score_parallel.py
