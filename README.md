@@ -1,4 +1,4 @@
-# azure-machine-learning-mlops-workshop
+# Azure Machine Learning MLOps Workshop
 
 A workshop for doing MLOps on Azure Machine Learning.
 
@@ -19,15 +19,15 @@ A workshop for doing MLOps on Azure Machine Learning.
 :pushpin: Please follow the hands-on exercise in the proposed order, as they build on each other.
 
 * AML Pipelines
-  * :weight_lifting: Exercise - Single-step pipeline - [`pipelines-single-training-step`](pipelines-single-training-step/)
-  * :weight_lifting: Exercise - Multi-step pipeline with parameters - [`pipelines-multi-step-pipeline`](pipelines-multi-step-pipeline/)
-  * :weight_lifting: Exercise - ParallelRunStep pipeline for batch scoring - [`pipelines-parallel-run-step`](pipelines-parallel-run-step/)
-  * :weight_lifting: Exercise - Hyperparametertuning pipeline - [`pipelines-hyperdrive-step`](pipelines-hyperdrive-step/)
+  * :weight_lifting: Exercise - Single-step pipeline - [`pipelines-single-training-step`](01-pipelines-single-training-step/)
+  * :weight_lifting: Exercise - Multi-step pipeline with parameters - [`pipelines-multi-step-pipeline`](02-pipelines-multi-step-pipeline/)
+  * :weight_lifting: Exercise - ParallelRunStep pipeline for batch scoring - [`pipelines-parallel-run-step`](03-pipelines-parallel-run-step/)
+  * :weight_lifting: Exercise - Hyperparametertuning pipeline - [`pipelines-hyperdrive-step`](04-pipelines-hyperdrive-step/)
 * MLOps on Azure DevOps
-  * :weight_lifting_woman: Exercise - Deploy AML pipeline as Published Endpoint - [`devops-deploy-simple-pipeline`](devops-deploy-simple-pipeline/)
-  * :weight_lifting_woman: Exercise - Deploy AML pipeline as Published Endpoint, automatically test it and then add it to a Pipeline Endpoint - [`devops-deploy-pipeline-with-tests`](devops-deploy-pipeline-with-tests/)
+  * :weight_lifting_woman: Exercise - Deploy AML pipeline as Published Endpoint - [`devops-deploy-simple-pipeline`](05-devops-deploy-simple-pipeline/)
+  * :weight_lifting_woman: Exercise - Deploy AML pipeline as Published Endpoint, automatically test it and then add it to a Pipeline Endpoint - [`devops-deploy-pipeline-with-tests`](06-devops-deploy-pipeline-with-tests/)
 * Model Deployment
-  * :weight_lifting_woman: Exercise - Deploy model to ACI and AKS using the AML CLI - [`deployment-using-cli`](deployment-using-cli/)
+  * :weight_lifting_woman: Exercise - Deploy model to ACI and AKS using the AML CLI - [`deployment-using-cli`](07-deployment-using-cli/)
 
 **Words of caution:**
 The hands-on exercises do not fully embrace concepts like DRY (don't repeat yourself) or other best pratices when it comes to coding standards. Feel free to use them for understanding the concepts, but don't blindly copy and paste them to production.
