@@ -15,8 +15,8 @@ Before starting with the exercises, make sure that you have the following in pla
 We recommend to run these exercises on a Compute Instance on Azure Machine Learning. To get started, open Jupyter or JupyterLab on the Compute Instance, select `New --> Terminal` (upper right corner) and clone this repo:
 
 ```cli
-git clone https://github.com/csiebler/azure-machine-learning-mlops-workshop.git
-cd azure-machine-learning-mlops-workshop/
+git clone https://github.com/lucazav/Azure-Machine-Learning-MLOps-Workshop.git
+cd Azure-Machine-Learning-MLOps-Workshop/
 ```
 
 Then navigate to the cloned folder in Jupyter, and open [`single_step_pipeline.ipynb`](single_step_pipeline.ipynb) from this exercise. In case you're asked for a kernel, please use the `Python 3.6 - AzureML` kernel that comes with the Compute Instance.
