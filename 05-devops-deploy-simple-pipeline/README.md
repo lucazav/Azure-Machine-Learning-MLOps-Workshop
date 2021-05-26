@@ -13,8 +13,8 @@ In this execise, we'll deploy a DevOps pipeline that will enable the following s
 
 Next, we'll clone the workshop repo into the project's "local" repo:
 
-1. Goto Repos, then select `Import a repository`
-1. Enter the `Clone URL`: `https://github.com/lucazav/Azure-Machine-Learning-MLOps-Workshop` and import it
+1. Goto Repos, then click `Import` under the "Import a repository" section
+1. Select `Git` as "Repository type", enter the `Clone URL`: `https://github.com/lucazav/Azure-Machine-Learning-MLOps-Workshop.git` and import it
 
 ## Create new Service Connection in Azure DevOps
 

@@ -12,12 +12,12 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  resourcegroup: 'aml-mlops-workshop' # replace with your resource group (same as you've used for the Service Connection)
-  workspace: 'aml-mlops-workshop' # replace with your workspace name (same as you've used for the Service Connection)
-  aml_compute_target: 'cpu-cluster'
+  resourcegroup: 'demo' # replace with your resource group (same as you've used for the Service Connection)
+  workspace: 'demo-ent-ws' # replace with your workspace name (same as you've used for the Service Connection)
+  aml_compute_target: 'cluster'
 
   # Azure Resource Manager connection created during pipeline creation
-  aml_service_connection: 'aml_workspace'
+  aml_service_connection: 'aml_workspace_20210524'
 
 steps:
 - task: UsePythonVersion@0
@@ -64,4 +64,4 @@ steps:
     scriptLocation: inlineScript
     scriptType: bash
     inlineScript: |
-      python devops-deploy-simple-pipeline/deploy_pipeline.py
+      python 05-devops-deploy-simple-pipeline/deploy_pipeline.py

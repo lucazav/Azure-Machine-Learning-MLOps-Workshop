@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.6.2
+  - pip<20.3 # https://stackoverflow.com/questions/65112585/pip-installation-stuck-in-infinite-loop-if-unresolvable-conflicts-in-dependencies
   - pip:
     - azureml-defaults>=1.13.0
     - azureml-dataprep[pandas,fuse] # Required for parallel batch scoring (ParallelRunStep)

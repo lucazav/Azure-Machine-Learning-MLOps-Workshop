@@ -7,9 +7,10 @@ This exercise shows how to register and deploy a model using the `az ml` CLI. I'
 Let's first set the default workspace and resource group for the folder we are in. This will also include subfolders and later allows us to not always having to specify the workspace and resource group in each call.
 
 ```cli
+az login
 cd azure-machine-learning-mlops-workshop/
 az ml folder attach -g <your resource group> -w <your workspace name>
-cd deployment-using-cli/
+cd 07-deployment-using-cli/
 ```
 
 ## Using the CLI for model registration

@@ -9,15 +9,15 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  resourcegroup: 'aml-mlops-workshop' # replace with your resource group (same as you've used for the Service Connection)
-  workspace: 'aml-mlops-workshop' # replace with your workspace name (same as you've used for the Service Connection)
-  aml_compute_target: 'cpu-cluster'
+  resourcegroup: 'demo' # replace with your resource group (same as you've used for the Service Connection)
+  workspace: 'demo-ent-ws' # replace with your workspace name (same as you've used for the Service Connection)
+  aml_compute_target: 'cluster'
 
   # Ideally this would be a smaller test data, but for sake of the workshop, let's just reuse it
   test_dataset: 'german-credit-train-tutorial'
 
   # Azure Resource Manager connection created during pipeline creation
-  aml_service_connection: 'aml_workspace'
+  aml_service_connection: 'aml_workspace_20210524'
 
 steps:
 - task: UsePythonVersion@0
@@ -64,7 +64,7 @@ steps:
     scriptLocation: inlineScript
     scriptType: bash
     inlineScript: |
-      python devops-deploy-pipeline-with-tests/deploy_pipeline.py
+      python 06-devops-deploy-pipeline-with-tests/deploy_pipeline.py
 
 - task: AzureCLI@2
   displayName: 'Test training pipeline functionally with small training dataset'
@@ -77,7 +77,7 @@ steps:
     inlineScript: |
       export PIPELINE_ID=$(pipeline_id)
       export DATASET_NAME=$(test_dataset)
-      pytest --junitxml=junit/TEST-training-pipeline.xml devops-deploy-pipeline-with-tests/
+      pytest --junitxml=junit/TEST-training-pipeline.xml 06-devops-deploy-pipeline-with-tests/
 
 - task: PublishTestResults@2
   displayName: 'Publish test results from pipeline test run'
@@ -92,4 +92,4 @@ steps:
     scriptType: bash
     inlineScript: |
       export PIPELINE_ID=$(pipeline_id)
-      python devops-deploy-pipeline-with-tests/add_to_pipeline_endpoint.py
+      python 06-devops-deploy-pipeline-with-tests/add_to_pipeline_endpoint.py

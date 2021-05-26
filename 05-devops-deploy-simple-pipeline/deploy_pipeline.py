@@ -6,7 +6,7 @@ from azureml.pipeline.steps import PythonScriptStep
 from azureml.data.dataset_consumption_config import DatasetConsumptionConfig
 
 # AML Pipeline defaults (hardcoded for the sake of the workshop)
-source_directory = 'pipelines-single-training-step/'
+source_directory = '01-pipelines-single-training-step/'
 default_dataset_name = 'german-credit-train-tutorial'
 
 print(f'Azure ML SDK version: {azureml.core.VERSION}')
@@ -39,7 +39,9 @@ steps = [train_step]
 
 pipeline = Pipeline(workspace=ws, steps=steps)
 pipeline.validate()
-published_pipeline = pipeline.publish('mlops-training-pipeline-from-devops')
+published_pipeline = pipeline.publish('mlops-training-pipeline-from-devops-20210524')
 
 # Printing the pipeline's id this way will make it available in Azure DevOps for the subsequent tasks
+# Check the logging commands for further details:
+#   - https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands
 print(f'##vso[task.setvariable variable=pipeline_id]{published_pipeline.id}')
