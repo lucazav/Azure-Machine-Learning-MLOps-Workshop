@@ -8,7 +8,7 @@ Let's first set the default workspace and resource group for the folder we are i
 
 ```cli
 az login
-cd azure-machine-learning-mlops-workshop/
+cd Azure-Machine-Learning-MLOps-Workshop/
 az ml folder attach -g <your resource group> -w <your workspace name>
 cd 07-deployment-using-cli/
 ```
@@ -68,13 +68,13 @@ print("Prediction (good, bad):", response.text)
 Before we can deploy to Azure Kubernetes Service (AKS), we first need to create a small cluster (we use `DevTest` for a single node cluster):
 
 ```cli
-az ml computetarget create aks --name aks-cluster --cluster-purpose DevTest
+az ml computetarget create aks --name inf-cluster --cluster-purpose DevTest
 ```
 
 Now, we can deploy to it - only difference is that we use a differnet deployment config and are required to specify to which cluster we want to deploy:
 
 ```cli
-az ml model deploy -n credit-model-aks -m credit-model:1 --compute-target aks-cluster --inference-config-file config/inference-config.yml --deploy-config-file config/deployment-config-aks-prod.yml --overwrite
+az ml model deploy -n credit-model-aks -m credit-model:1 --compute-target inf-cluster --inference-config-file config/inference-config.yml --deploy-config-file config/deployment-config-aks-prod.yml --overwrite
 ```
 
 * `--compute-target` defines the target AKS cluster where we want to deploy too
